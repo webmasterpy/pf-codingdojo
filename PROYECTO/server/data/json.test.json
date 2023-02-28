@@ -1,0 +1,35 @@
+{
+    "___comentario___":"Insercion POST EN USUARIOS =>http://localhost:8000/api/users/nuevo/"
+},
+{
+    "firstName":"Eduardo",
+    "lastName":"Cuellar",
+    "email":"mail@mail.com",
+    "username":"eduardo",
+    "password":"123456"
+},
+
+{
+    "___comentario___":"Insercion POST EN PIRATECREW =>http://localhost:8000/api/pirates/newPirate/"
+},
+
+{
+    "name":"Marin",
+    "image":"https://cdn.pixabay.com/photo/2016/03/22/16/09/sailboat-1273168_640.jpg",
+    "numChests":"3",
+    "catchPhrase":"Los muertos no hablan",
+    "hookHand":"true",
+    "eyePatch":"true",
+    "pegLeg":"true",
+    "crewPosition":"Captian",
+},
+{
+    "name":"Jack Sparrow",
+    "image":"https://imagenes.elpais.com/resizer/CIxGfWZyasOBKg_7VpLz9xLlrSg=/980x980/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/WSNIO64JNSGQ7UF4WPKAIOXJ7U.jpg",
+    "numChests":"10",
+    "catchPhrase":"Siempre recordarás este día como el día en el que casi capturas a Jack Sparrow",
+    "hookHand":"true",
+    "eyePatch":"true",
+    "pegLeg":"true",
+    "crewPosition":"Captian"
+}

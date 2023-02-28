@@ -1,0 +1,182 @@
+
+{
+    "___comentario___":"[POST] Insercion EN USUARIOS =>http://localhost:8000/api/users/nuevo/"
+},
+{
+    "nombre":"Eduardo Cuellar",
+    "usuario":"eduardo",
+    "password":"123456",
+    "tipo":"admin"
+},
+
+{
+    "___comentario___":"[POST] LOGIN USUARIO =>http://localhost:8000/api/users/login"
+},
+{
+    "usuario":"master",
+    "password":"123456"
+},
+{
+    "___comentario___":"[GET] LOGOUT USUARIO =>http://localhost:8000/api/users/logout"
+},
+
+// #CONSULTA BANNER ************************************************************
+{
+    "___comentario___":"[POST] NUEVO BANNER =>http://localhost:8000/api/banner/nuevo"
+},
+{
+    "titulo":"Primer Banner",
+    "imagen":"banner_1.png",
+    "activado": true
+},
+{
+    "titulo":"Segundo Banner",
+    "imagen":"banner_2.png",
+    "activado": true
+},
+{
+    "___comentario___":"[GET] LISTA DE BANNER =>http://localhost:8000/api/banner/todos"
+},
+{
+    "results": [
+        {
+            "_id": "63fd3948d58c5d45870c6d43",
+            "titulo": "Primer banner",
+            "imagen": "banner_1.png",
+            "activado": true,
+            "createdAt": "2023-02-27T23:14:16.776Z",
+            "updatedAt": "2023-02-27T23:14:16.776Z",
+            "__v": 0
+        },
+        {
+            "_id": "63fd39a6d58c5d45870c6d45",
+            "titulo": "Segundo Banner",
+            "imagen": "banner_2.png",
+            "activado": true,
+            "createdAt": "2023-02-27T23:15:50.822Z",
+            "updatedAt": "2023-02-27T23:15:50.822Z",
+            "__v": 0
+        }
+    ]
+},
+
+
+{
+    "___comentario___":"[POST] NUEVO PORTFOLIO =>http://localhost:8000/api/portfolio/nuevo"
+},
+{
+    "titulo":"Desarrollo Web",
+    "descripcion":"Desarrollo web para la Empresa CoolMaster",
+    "imagen":"proyecto_1.png"
+},
+{
+    "results": {
+        "titulo": "Desarrollo Web",
+        "descripcion": "Desarrollo web para la Empresa CoolMaster",
+        "imagen": "proyecto_1.png",
+        "_id": "63fd480a2780defc4f7a7dfd",
+        "createdAt": "2023-02-28T00:17:14.794Z",
+        "updatedAt": "2023-02-28T00:17:14.794Z",
+        "__v": 0
+    }
+},
+
+
+{
+    "titulo":"Panel Administrador",
+    "descripcion":"Desarrollo panel de gestion Proto",
+    "imagen":"proyecto_2.png"
+},
+{
+    "results": {
+        "titulo": "Panel Administrador",
+        "descripcion": "Desarrollo panel de gestion Proto",
+        "imagen": "proyecto_2.png",
+        "_id": "63fd485a2780defc4f7a7dff",
+        "createdAt": "2023-02-28T00:18:34.487Z",
+        "updatedAt": "2023-02-28T00:18:34.487Z",
+        "__v": 0
+    }
+},
+
+{
+    "titulo":"Sistema de Facturacion",
+    "descripcion":"Desarrollo de Sistema de Facturacion DX-POS",
+    "imagen":"proyecto_3.png"
+},
+{
+    "results": {
+        "titulo": "Sistema de Facturacion",
+        "descripcion": "Desarrollo de Sistema de Facturacion DX-POS",
+        "imagen": "proyecto_3.png",
+        "_id": "63fd48de2780defc4f7a7e01",
+        "createdAt": "2023-02-28T00:20:46.938Z",
+        "updatedAt": "2023-02-28T00:20:46.938Z",
+        "__v": 0
+    }
+},
+
+
+{
+    "titulo":"Servicio Web Hosting",
+    "descripcion":"Servicios de Hosting Dedicado VPS",
+    "imagen":"web_hosting.jpg"
+},
+{
+    "results": {
+        "titulo": "Servicio Web Hosting",
+        "descripcion": "Servicios de Hosting Dedicado VPS",
+        "imagen": "web_hosting.jpg",
+        "_id": "63fd4f73d1e6db9e845c2830",
+        "createdAt": "2023-02-28T00:48:51.370Z",
+        "updatedAt": "2023-02-28T00:48:51.370Z",
+        "__v": 0
+    }
+},
+
+
+{
+    "titulo":"Registro de Dominoi",
+    "descripcion":"Servicios de Registro de Dominio Globales",
+    "imagen":"damain.jpg"
+},
+{
+    "results": {
+        "titulo": "Registro de Dominoi",
+        "descripcion": "Servicios de Registro de Dominio Globales",
+        "imagen": "damain.jpg",
+        "_id": "63fd4fb2d1e6db9e845c2832",
+        "createdAt": "2023-02-28T00:49:54.734Z",
+        "updatedAt": "2023-02-28T00:49:54.734Z",
+        "__v": 0
+    }
+},
+
+{
+    "titulo":"UX/UI Design",
+    "descripcion":"Desarrollo de Interfaces Graficas UX/UI",
+    "imagen":"ux-ui-design.jpg"
+},
+{
+    "results": {
+        "titulo": "UX/UI Design",
+        "descripcion": "Desarrollo de Interfaces Graficas UX/UI",
+        "imagen": "ux-ui-design.jpg",
+        "_id": "63fd4ff0d1e6db9e845c2834",
+        "createdAt": "2023-02-28T00:50:56.517Z",
+        "updatedAt": "2023-02-28T00:50:56.517Z",
+        "__v": 0
+    }
+},
+
+
+{
+    "titulo":"Mi Experiencia",
+    "columna_1":"Llevo haciendo aplicaciones y páginas web de forma profesional y activa durante los últimos 15 años. Esto hace que haya ido acumulando experiencia en muchos lenguajes y fases del desarrollo de aplicaciones. Puedo aprender nuevas tecnologías con rapidez, y de hecho, me encanta hacerlo.",
+    "columna_2":"Si desea conocer las áreas del diseño de páginas web en los que tengo experiencia, siga leyendo. Seguro que encontrará en mí un aliado para todos sus proyectos de programación web, sin importar lo complejos o grandes que sean."
+
+},
+
+
+
+

@@ -1,0 +1,177 @@
+body{
+  margin:0px;
+}
+
+.linea-bottom{
+  border-bottom: 1px solid #000;
+}
+
+label{
+  color: #000 !important;
+}
+
+/******************* 
+  LOGIN Y REGISTRO 
+********************/
+
+.contenedor-login{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.ancho{
+  width: 80%;
+  margin: auto;
+  background-color: #ff9900 !important;
+  /* color: #FFFFFF !important; */
+}
+
+.fondo-bar{
+  background-color: #773f03 !important;
+  color: #FFFFFF !important;
+  width: 100% !important;
+  padding: 10px;
+}
+
+.fondo-contenido{
+  background-color: #ff9900 !important;
+  color: #FFFFFF !important;
+}
+
+.fondo-blanco{
+  background-color:#FFFFFF;
+}
+
+.borde-negro{
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.btn-top{
+  border: 2px solid black;
+  height: 40px;
+  box-shadow: 5px 5px black;
+  background-color:cornflowerblue;
+  color: white;
+  font-size: 16px
+}
+
+.contenedor-boton{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: inherit;
+  margin-top: -47px;
+}
+
+.margen-30{
+  margin:30px;
+}
+
+.margen-40{
+  margin:40px;
+}
+
+.margen-50{
+  margin:50px;
+}
+
+.padding-20{
+  padding: 20px;
+}
+
+.label{
+  color: #000 !important;
+}
+
+/******************** 
+      DASHBOARD 
+****************** */
+.listado-piratas{
+  width:90%;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color:#FFF;
+  min-height: 120px;
+  padding:10px;
+  border-radius:6px;
+  border: 1px solid #000;
+}
+
+.contenedor-imagen{
+  width: 225px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.contenedor-imagen img{
+  width: 225px;
+  height:225px;
+  object-fit: cover;
+}
+
+/******************** 
+      DETALLE 
+****************** */
+.contenedor-detalle{
+  /* display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap; */
+}
+
+.contenedor-about{
+  background-color:#FFF;
+  padding:10px;
+  border-radius: 8px;
+  width:90%;
+  min-height: 400px;
+}
+
+.contenedor-imagen-detalle{
+  width: 400px;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.contenedor-imagen-detalle img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.ordenado{
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mi-boton{
+  min-width: 120px;
+}
+
+td{
+  vertical-align: middle !important;
+}
+
+
+/******************** 
+      DASHBOARD 
+****************** */
+
+.contenedor-carga{
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
+}
+
+.form-check-input{
+  font-size: 25px;
+}
