@@ -25,7 +25,7 @@ module.exports.unPortfolio = (req, res) => {
 
 // EXPORTAMOS FUNCION PARA OBTENER 6 PORTFOLIO
 module.exports.seisPortfolio = (req, res) => {
-    Portfolio.find({}).limit(6)
+    Portfolio.find({}).sort({titulo: 1}).limit(6)
         .then(datos_4 => res.json({ results: datos_4 }))
         .catch(err => res.json({ message: 'Error al obtener lista de 6 portfolio:', err }));
 }

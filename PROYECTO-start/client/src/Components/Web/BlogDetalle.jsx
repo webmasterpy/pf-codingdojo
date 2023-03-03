@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import ReactDOM from 'react-dom/client';
+import { useParams } from "react-router-dom";
 import axios from 'axios';
 import Navegacion from './Navegacion'
 import './BlogDetalle.css'
@@ -8,7 +7,7 @@ import './BlogDetalle.css'
 const BlogDetalle = () => {
 
     const [blog, setBlog] = useState({});
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const { idBlog } = useParams();
 
     useEffect(() => {
@@ -18,11 +17,8 @@ const BlogDetalle = () => {
                 console.log(res.data.results)
             })
             .catch(err => console.log(err))
-    }, [])
+    }, [idBlog])
 
-    // const cargaHtml = (html)=>{
-    //     return ReactDOM.render(html)
-    // }
     return (
         <>
         <div id="home">

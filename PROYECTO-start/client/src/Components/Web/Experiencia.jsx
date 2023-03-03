@@ -7,7 +7,7 @@ const Experiencia = () => {
     useEffect(() => {
         axios.get('http://localhost:8000/api/experiencia/una')
             .then(res => {
-                console.log(res.data.results[0]);
+                //console.log(res.data.results[0]);
                 setExperiencias(res.data.results[0]);
             })
             .catch(err => console.log(err))

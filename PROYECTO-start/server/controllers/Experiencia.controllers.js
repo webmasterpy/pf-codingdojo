@@ -16,6 +16,13 @@ module.exports.unaExperiencia = (req, res) => {
         .catch(err => res.json({ message: 'Lista de todas las experiencias ha fallado', err }));
 }
 
+// EXPORTAMOS FUNCION PARA OBTENER 1 EXPERIENCIA
+module.exports.getExperiencia = (req, res) => {
+    Experiencia.findOne({ _id: req.params._id })
+        .then(datos_6 => res.json({ results: datos_6 }))
+        .catch(err => res.json({ message: 'Error al obtener 1 Banner:', err }));
+}
+
 // EXPORTAMOS FUNCION PARA EDITAR  EXPERIENCIA
 module.exports.editarExperiencia = (req, res) => {
     Experiencia.updateOne({ _id: req.params._id }, req.body, { runValidators: true })

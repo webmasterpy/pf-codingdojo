@@ -1,7 +1,54 @@
-import React from 'react'
+import React, {useState} from "react";
+import axios from "axios";
 
-const Contacto = () => {
-  return (
+//import PropTypes from "prop-types";
+
+
+const Contacto = ()=> {
+    const [mailSent, setmailSent] = useState(false);
+    const [error, setError] = useState(null);
+    const [formData, setFormData] = useState({});
+    const [errores, setErrores] = useState({})
+
+    const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+        }
+    };
+    
+
+    const handleFormSubmit = e => {
+        e.preventDefault();
+        axios({
+          method: "post",
+          url: `http://sistemasbig.com/dojo-correo.php`,
+          headers: { "content-type": "application/json" },
+          data: formData
+        }, config)
+          .then(result => {
+            if (result.data.sent) {
+              setmailSent(result.data.sent)
+              setError(false)
+            } else {
+              setError(true)
+            }
+        })
+        .catch(error => setError( error.message ));
+    };
+
+    const handleChange = (e, field) => {
+        let value = e.target.value;
+        setFormData({
+          ...formData,
+          [field]: value,
+        });
+    };
+
+    //const { title, description, successMessage, errorMessage, fieldsConfig } = props.config;
+
+
+    return (
     <section className="page-section" id="contacto">
         <div className="container">
             <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Contacto</h2>
@@ -12,27 +59,22 @@ const Contacto = () => {
             </div>
             <div className="row justify-content-center">
                 <div className="col-lg-8 col-xl-7">
-                    <form id="contactForm" method="post">
+                    <form id="contactForm" method="post" onSubmit={handleFormSubmit}>
                         <div className="form-floating mb-3">
-                            <input className="form-control" id="name" type="text" placeholder="Ingrese su nombre..." data-sb-validations="required" />
-                            <label for="name">Nombre Completo</label>
-                            <div className="invalid-feedback" data-sb-feedback="name:required">Nombre es requerido.</div>
+                            <input className="form-control" name="name" id="name" type="text" placeholder="Ingrese su nombre..." onChange={e => handleChange(e, e.fieldName)}/>
+                            <label htmlFor="name">Nombre Completo</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input className="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" data-sb-validations="required,email" />
-                            <label for="email">Correo</label>
-                            <div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            <input className="form-control" name="email" id="email" type="email" placeholder="nombre@ejemplo.com" onChange={e => handleChange(e, e.fieldName)}/>
+                            <label htmlFor="email">Correo</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input className="form-control" id="phone" type="tel" placeholder="(0981) 123-456" data-sb-validations="required" />
-                            <label for="phone">Numero Telefono</label>
-                            <div className="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            <input className="form-control" name="phone" id="phone" type="tel" placeholder="(0981) 123-456" onChange={e => handleChange(e, e.fieldName)}/>
+                            <label htmlFor="phone">Numero Telefono</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <textarea className="form-control" id="message" type="text" placeholder="Ingrese su mensaje..." style={{height: "10rem"}} data-sb-validations="required"></textarea>
-                            <label for="message">Mensaje</label>
-                            <div className="invalid-feedback" data-sb-feedback="message:required">MEnsaje es requerido.</div>
+                            <textarea className="form-control" name="message" id="message" type="text" placeholder="Ingrese su mensaje..." style={{height: "10rem"}} onChange={e => handleChange(e, e.fieldName)} ></textarea>
+                            <label htmlFor="message">Mensaje</label>
                         </div>
                         
                         <div className="d-none" id="submitSuccessMessage">

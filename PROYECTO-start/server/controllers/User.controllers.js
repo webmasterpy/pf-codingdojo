@@ -49,23 +49,23 @@ module.exports.nuevoUsuario = (req, res) => {
 
 // EXPORTAMOS FUNCION PARA OBTENER 1 USUARIO
 module.exports.login = async (req, res) => {
+    console.log(req.body)
     const usuario = await User.findOne({usuario:req.body.usuario})
-
     if(!usuario){
-        res.status(400).json({error: "Usuario/Password incorrecto"})
+        res.json({error: "Usuario/Password incorrecto"})
     }
-
     try{
         const passValidation = await bcrypt.compare(req.body.password, usuario.password )
-        console.log(passValidation, "PASSWORD VALIDA")
+        //console.log(passValidation, "PASSWORD VALIDA")
         if(!passValidation){
-            res.status(400).json({error: "Email/Password no valido"})
+            return res.json({error: "Email/Password no valido"})
         }else{
-         const userToken = jwt.sign({_id:usuario._id}, SECRET)
-         res.status(201).cookie('userToken', userToken, {httpOnly:true, expires:new Date(Date.now() + 90000)}).json({successMessage:"Usuario Logueado"})
+            const userToken = jwt.sign({_id:usuario._id}, SECRET)
+            res.cookie('userToken', userToken, {httpOnly:true, expires:new Date(Date.now() + 90000)}).json({ successMessage:"Usuario Logueado", token: userToken})
         }
+        
     }catch(error){
-        res.status(400).json({error: "Email/Password no valido"})
+        return res.json({error: "Email/Password no valido"})
     }
 
     // console.log(req.body)

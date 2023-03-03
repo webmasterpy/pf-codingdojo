@@ -33,7 +33,7 @@ const Blog = () => {
                 {
                     blogs.map((blog, indice)=>{
                         return (
-                            <div className="col-lg-4">
+                            <div className="col-lg-4" key={indice}>
                                 <div className="blog-grid">
                                     <div className="blog-img">
                                         {/* <div className="date">04 FEB</div> */}
